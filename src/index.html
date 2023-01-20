@@ -10,12 +10,21 @@
 </head>
 
 <body>
-    <form action="#" class="countris">
+    <form action="#" class="countries">
         <input type="text" placeholder="Search" class="textFilter">
-        <div>
-            <input type="checkbox" name="showSelected" id="showSelected" value="Show selected only"
-                class="showSelectedCountris">
-            <input type="button" value="Clear all" </div>
+        <div class="wrapper">
+            <div class="filtersWrapper">
+                <div class="checkboxWrapper">
+                    <div class="checkboxMarkerWrapper">
+                        <img src="./images/checkbox-track.svg" alt="checkbox track" class="checkboxTrack">
+                        <!-- <img src="./images/checkbox-marker.svg" alt="checkbox marker" class="checkboxMarker"> -->
+                    </div>
+                    <label for="showSelected" class="showSelectedLabel">Show selected only</label>
+                    <input type="checkbox" name="showSelected" id="showSelected" value="Show selected only"
+                        class="showSelectedCountris" />
+                    <input type="button" value="Clear all" class="clearButton" />
+                </div>
+            </div>
             <ul class="counriesList">
                 <li><input type="checkbox" name="country01" id="country01"></li>
                 <li><input type="checkbox" name="country02" id="country02"></li>
@@ -34,6 +43,7 @@
                 <li><input type="checkbox" name="country15" id="country15"></li>
                 <li><input type="checkbox" name="country16" id="country16"></li>
             </ul>
+            <input type="submit" value="Save" class="submitBtn">
 
     </form>
 
