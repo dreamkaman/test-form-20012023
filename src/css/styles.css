@@ -80,7 +80,11 @@ button {
   cursor: pointer;
 }
 
-.countries {
+.countriesForm {
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 494px / 2);
+
   width: 494px;
   height: 446px;
   padding: 20px;
@@ -92,6 +96,10 @@ button {
   background: #ffffff;
 }
 
+.showSelectedCountris {
+  visibility: hidden;
+}
+
 .textFilter {
   width: 100%;
   height: 32px;
@@ -101,7 +109,10 @@ button {
   border-bottom: 1px solid #ececec;
 }
 
-.wrapper {
+.filtersWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .checkboxWrapper {
@@ -109,7 +120,7 @@ button {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   padding: 23px 0;
 }
@@ -149,6 +160,7 @@ button {
 }
 
 .clearButton {
+  padding: 0;
   font-weight: 550;
   border: none;
   background-color: transparent;
@@ -156,4 +168,46 @@ button {
   letter-spacing: -0.5px;
   color: #232323;
   cursor: pointer;
+}
+
+.counriesList {
+  height: 247px;
+  border-bottom: 1px solid #ececec;
+  overflow-y: scroll;
+}
+
+.counriesList input {
+  display: none;
+}
+
+.counriesList li {
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 20px;
+}
+
+.counriesList label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.counriesList label::before {
+  display: inline-block;
+  content: "";
+  margin-right: 15px;
+  width: 22px;
+  height: 22px;
+  border-radius: 8px;
+
+  background-color: #ececec;
+}
+
+.counriesList input:checked + label::before {
+  background-color: #457df1;
+  background-image: url("../images/checkbox.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
