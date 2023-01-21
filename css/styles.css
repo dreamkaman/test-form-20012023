@@ -111,10 +111,6 @@ button {
   justify-content: space-between;
 }
 
-.showSelectedCountries {
-  display: none;
-}
-
 .checkboxWrapper {
   position: relative;
 
@@ -123,6 +119,10 @@ button {
   justify-content: flex-start;
 
   padding: 23px 0;
+}
+
+.showSelectedCountries {
+  display: none;
 }
 
 .checkboxMarkerWrapper::before {
