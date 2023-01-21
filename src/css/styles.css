@@ -97,7 +97,7 @@ button {
 }
 
 .showSelectedCountris {
-  visibility: hidden;
+  display: none;
 }
 
 .textFilter {
@@ -151,6 +151,9 @@ button {
 }
 
 .showSelectedLabel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   margin-right: 10px;
   font-weight: 550;
   line-height: 1.375;
@@ -159,9 +162,29 @@ button {
   cursor: pointer;
 }
 
+.showSelectedLabel:before {
+  display: inline-block;
+  content: "";
+  width: 37px;
+  height: 22px;
+  margin-right: 10px;
+  background-image: url("../images/checkbox-marker.svg"),
+    url("../images/checkbox-track.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: 2px, 0;
+  background-position-y: 1px, 0;
+}
+
+.showSelectedCountris:checked + .showSelectedLabel:before {
+  background-image: url("../images/checkbox-marker.svg"),
+    url("../images/checkbox-track-checked.svg");
+  background-position-x: calc(37px - 20px - 2px), 0;
+}
+
 .clearButton {
   padding: 0;
   font-weight: 550;
+  font-size: 16px;
   border: none;
   background-color: transparent;
   line-height: 1.375;
@@ -172,6 +195,7 @@ button {
 
 .counriesList {
   height: 247px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #ececec;
   overflow-y: scroll;
 }
@@ -191,6 +215,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  font-family: "Campton-Book";
+  font-weight: 475;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -210,4 +238,23 @@ button {
   background-image: url("../images/checkbox.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.btnWrapper {
+  text-align: right;
+}
+
+.submitBtn {
+  width: 87px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 50px;
+  background-color: #60d09b;
+  color: white;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background-color: #43b47f;
 }
