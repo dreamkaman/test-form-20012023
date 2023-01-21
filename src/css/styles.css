@@ -96,10 +96,6 @@ button {
   background: #ffffff;
 }
 
-.showSelectedCountris {
-  display: none;
-}
-
 .textFilter {
   width: 100%;
   height: 32px;
@@ -113,6 +109,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.showSelectedCountries {
+  display: none;
 }
 
 .checkboxWrapper {
@@ -175,7 +175,7 @@ button {
   background-position-y: 1px, 0;
 }
 
-.showSelectedCountris:checked + .showSelectedLabel:before {
+.showSelectedCountries:checked + .showSelectedLabel:before {
   background-image: url("../images/checkbox-marker.svg"),
     url("../images/checkbox-track-checked.svg");
   background-position-x: calc(37px - 20px - 2px), 0;
